@@ -129,7 +129,7 @@ namespace GitClone
                                 SetProgress();
                                 if (listBox1.Items.Count == repositories.Count)
                                 {
-                                    MetroMessageBox.Show(this, $"Foi baixado todos os {repositories.Count}", "Donwload completo.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MetroMessageBox.Show(this, $"Donwload completo de {repositories.Count} projetos.", "Donwload completo.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
                                 }
                             }));

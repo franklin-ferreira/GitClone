@@ -31,3 +31,14 @@ C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\obj\Debug\GitClone.csproj.G
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\obj\Debug\GitClone.csproj.CoreCompileInputs.cache
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\obj\Debug\GitClone.exe
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\obj\Debug\GitClone.pdb
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\GitClone.exe.config
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\GitClone.exe
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\GitClone.pdb
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\MetroFramework.Design.dll
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\MetroFramework.dll
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\SDK.Extensions.pdb
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\SDK.Extensions.dll.config
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\obj\Debug\GitClone.csproj.CopyComplete

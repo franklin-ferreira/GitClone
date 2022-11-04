@@ -45,6 +45,10 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="SDK.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SDK.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
@@ -95,10 +99,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SDK.Extensions\SDK.Extensions.csproj">
-      <Project>{50947b22-da82-4f88-8102-de035ff0b52c}</Project>
-      <Name>SDK.Extensions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ucControls\ucControls.csproj">
       <Project>{2c4f1498-27b1-4450-aec3-df11af12c25d}</Project>
       <Name>ucControls</Name>
