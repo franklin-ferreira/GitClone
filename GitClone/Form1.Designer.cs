@@ -52,8 +52,8 @@
             this.painelNotificacao = new MetroFramework.Controls.MetroPanel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -372,16 +372,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 8F);
-            this.label1.Location = new System.Drawing.Point(1, 419);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Franklin";
-            // 
             // toolTip1
             // 
             this.toolTip1.AutoPopDelay = 10000;
@@ -393,12 +383,24 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Ajuda";
             // 
+            // metroToggle1
+            // 
+            this.metroToggle1.AutoSize = true;
+            this.metroToggle1.Location = new System.Drawing.Point(461, 414);
+            this.metroToggle1.Name = "metroToggle1";
+            this.metroToggle1.Size = new System.Drawing.Size(80, 17);
+            this.metroToggle1.TabIndex = 17;
+            this.metroToggle1.Text = "Off";
+            this.toolTip1.SetToolTip(this.metroToggle1, "Use apenas se voce tiver muitos repositórios para baixar,\r\nEssa opção usa bastant" +
+        "e recurso do computador.");
+            this.metroToggle1.UseSelectable = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 434);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.metroToggle1);
             this.Controls.Add(this.painelNotificacao);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
@@ -407,7 +409,7 @@
             this.MinimumSize = new System.Drawing.Size(561, 434);
             this.Name = "Form1";
             this.Style = MetroFramework.MetroColorStyle.Lime;
-            this.Text = "Git Clone";
+            this.Text = "Git donwload";
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -444,8 +446,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private MetroFramework.Controls.MetroToggle metroToggle1;
     }
 }
 

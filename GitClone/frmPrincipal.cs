@@ -112,41 +112,79 @@ namespace GitClone
                 metroProgressSpinner1.Spinning = true;
                 try
                 {
+                    listBox1.Items.Clear();
                     await Task.Factory.StartNew(async () =>
                     {
                         startProcess = true;
-                        foreach (var item in repositories)
+                        if (metroToggle1.Checked)
                         {
-                            await Extension.RunCommandInWindowsPropmptAsync($"cd {localDownload} && git clone {item}");
-                            var dir = Directory.GetDirectories(localDownload);
-
-                            Invoke(new MethodInvoker(() =>
+                            Parallel.ForEach(repositories, async repos =>
                             {
-                                listBox1.Items.Clear();
-                                listBox1.Items.AddRange(dir.Select(x => Path.GetFileName(x)).ToArray());
-                                listBox1.Refresh();
-                                mtTotal.Text = $"Downloading {listBox1.Items.Count.ToString()} ..";
-                                SetProgress();
-                                if (listBox1.Items.Count == repositories.Count)
+                                await Extension.RunCommandInWindowsPropmptAsync($"cd {localDownload} && git clone {repos}").ContinueWith(_ =>
                                 {
-                                    MetroMessageBox.Show(this, $"Donwload completo de {repositories.Count} projetos.", "Donwload completo.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
-                                }
-                            }));
+                                    var dir = Directory.GetDirectories(localDownload);
+                                    Invoke(new MethodInvoker(async () =>
+                                    {
+                                        listBox1.Items.Clear();
+                                        listBox1.Items.AddRange(dir.Select(x => Path.GetFileName(x)).ToArray());
+                                        listBox1.Refresh();
+                                        mtTotal.Text = $"Baixando {listBox1.Items.Count.ToString()} ..";
+                                        SetProgress();
+                                        if (listBox1.Items.Count == repositories.Count)
+                                        {
+                                            mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
+                                            await Extension.RunCommandInWindowsPropmptAsync($"start {localDownload}");
+                                            metroProgressSpinner1.Spinning = false;
+                                            btnIniciar.Text = "Iniciar donwload";
+                                            startProcess = false;
+                                        }
+                                    }));
+                                });
+                            });
                         }
+                        else
+                        {
+                            foreach (var item in repositories)
+                            {
+                                await Extension.RunCommandInWindowsPropmptAsync($"cd {localDownload} && git clone {item}")
+                                .ContinueWith(_ =>
+                                {
+                                    var dir = Directory.GetDirectories(localDownload);
+                                    Invoke(new MethodInvoker(async () =>
+                                    {
+                                        listBox1.Items.Clear();
+                                        listBox1.Items.AddRange(dir.Select(x => Path.GetFileName(x)).ToArray());
+                                        listBox1.Refresh();
+                                        mtTotal.Text = $"Baixando {listBox1.Items.Count.ToString()} ..";
+                                        SetProgress();
+                                        if (listBox1.Items.Count == repositories.Count)
+                                        {
+                                            mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
+                                            await Extension.RunCommandInWindowsPropmptAsync($"start {localDownload}");
+                                            metroProgressSpinner1.Spinning = false;
+                                            btnIniciar.Text = "Iniciar donwload";
+                                            startProcess = false;
+                                        }
+                                    }));
+                                });
+                            }
+                        }
+                        
                     }, token.Token, TaskCreationOptions.None, TaskScheduler.Current);
                 }
                 catch (System.Exception ex)
                 {
                     if (token.IsCancellationRequested)
                     {
-                        btnIniciar.Text = "Iniciar donwload";
                         MessageBox.Show("Operação cancelada.");
                     }
                     else
                     {
                         MessageBox.Show($"{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                     }
+                    btnIniciar.Text = "Iniciar donwload";
+                    startProcess = false;
                 }
             }
             else
