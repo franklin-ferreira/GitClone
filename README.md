@@ -1,5 +1,6 @@
 # GitClone
-Clonar repositórios do git
+Clonar repositórios do git 
+`Precisa ter as credenciais do GIT já cadastrada para seu usuário.`
 
 > Tela inicial
 >
