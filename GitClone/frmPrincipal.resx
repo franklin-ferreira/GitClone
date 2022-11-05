@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="metroPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="listBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="mtTotal.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mtTotal.TileImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -149,9 +140,6 @@
         sUsAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="metroTile1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="metroTile1.TileImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAA4tJREFUaEPt
@@ -173,25 +161,7 @@
         gbabf+dYPQwAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="metroPanel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="metroTile7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="metroLink3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="metroLink3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSelecionarLocalDonwload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAfFJREFUaEPt
         mD1KA1EURp8oKIimUATFKP7EZKJLsBDsLKxdgxuwtnANVooRC4maFEEUggTEBJORbMDGPkQSGwvB6xu4
@@ -205,7 +175,7 @@
         nGexWCwWC6PUDyorJom/xNvQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="metroLink3.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSelecionarLocalDonwload.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAA8ZJREFUaEPt
         lktIVFEYxwci2rSrXTQ7H9U6skTIjc0EPsfRpoc5944i1agtTNRFRJQR9LAGWhVpjZpZYlgZtpCinFIJ
@@ -230,18 +200,6 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>365, 16</value>
   </metadata>
-  <metadata name="metroTile6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="metroTile4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="metroPanel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="mtProgress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="mtProgress.TileImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAA8VJREFUaEPt
@@ -264,16 +222,7 @@
         E5+h07cIAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="metroPanel4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="metroProgressSpinner1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnIniciar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnIniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnIniciarDonwloadRepos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABEJJREFUaEPV
         mttvFFUcx1d9MUZFH3wyvsGDEYIGr1wSiEY6M5VLAGOIGo0S/wQSEpI+GOMbAXdmtlzKRUXDkwG8dGdm
@@ -297,7 +246,7 @@
         kbgHHLzuBO6gQ9IAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnIniciar.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnIniciarDonwloadRepos.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABTVJREFUaEPt
         1+tPm1UcB/BnikqB0XEtlELLBsii89X+AP8BE3VZjC76xhdqfGNilji6civ32zYuW7msMBgxLvGFiTG+
@@ -325,10 +274,7 @@
         /mcRhH8BmoPw8DanXEYAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="metroLink1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="metroLink1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSelecionarArquivo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAXhJREFUaEPt
         mT1OQlEUhF9jhRvxl+giLIyJshM7FSgsrEnUErfjAkQspLAgCvYu4PqOGRJjJoh3ZAq9X/K1M3PIe3kF
@@ -340,7 +286,7 @@
         R32hUPi7VNU7/Fi+PM0m+akAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="metroLink1.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSelecionarArquivo.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAhhJREFUaEPt
         kzEvQ1EYhrv4D/wOi9FQTEaSViKkV2NGGEkMOmFFhd9gF4lJTWLRVWKzWIhKuHzyXjk9eW9vz3G+kw59
@@ -355,9 +301,6 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <metadata name="metroTile2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="metroTile2.TileImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABQNJREFUaEPt
@@ -385,16 +328,38 @@
         4CXTnNLwy9ZVV12xCgT+A55gpJ9ENE7NAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="painelNotificacao.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>207, 17</value>
   </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAa5JREFUaEPt
+        mb1Kw1AYhjs7exHuXkdS11SoTt0ErT80yaBIi0jrBTi5uDs0iWNxUG/AwaWbg5N4BY3nPXwnBola2yRf
+        It8DLz1Nzs/7lEILaQhfsE7Gq7YfdLKCezStumz0gnXbC+Os4B5Nqy5GYOfyKT69edXBuHYC3avneHj7
+        roOxCJSFCHAjAtyIADciwI0IcCMC3IgANyLAjQhwIwLcVFqg6YUtVWT6S15UMgXoXtaaJJYfOnRcMVhu
+        5KmDdCFnMIlbZ3eZ6V1PEwGMs+YgTn9i5BCXjikWyw92cWB79DA7D9+Son8N1mIP7IU9aftyUF+nvWUk
+        sGZrdM9T3mD7YXcRiXR5fBC0HQ9GAoXmkUiXx1rahhfbi/bnkahkeYPlBgc/SeBae0jllTAtqxZGAkXT
+        EunymEPT8wOPfvArqV5X6NLCqJKHaYm8y6Mjdf18XKWfYakD8vqpb/rBAPttXzzOEF3ei/p0eynMXxV0
+        pkv5CwDbjY70QYga0+WlKU0AqD2PEXqbC6UKFIEIcPO/BWw/2sSEKgcdvxeoU9ICljte0xI1CjpT/TrT
+        aHwAXxpzTVDaAVUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnUpdate.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAXxJREFUaEPt
+        lD1Ow0AQhY2oKDgAHVegjCLscAFkG7nlHnAAuAMcAJQOJTa5Qlq4AVTpKdKgsCM9WRPnJTKBZMfSftKT
+        /PN29itWGwUCgf8lycrFpqBmFyatg5pdmLQOanZh0jqoBQLrYMdGBzW7MGkd1OzCpHVQswuT1kEtEFgH
+        OzY6qNmFSeugZhcmrYOaXZi0Dmp2YdI6qNmFSeugZhcmrYOaXZi0Dmp+cSKPTbG/Z/yA8bunKIaHbtPR
+        qsTWGclMjN8P/cuXY7fxe0Nkm7zJLIzdL4P09dQJzBpCv8lMZmCcHy7yqu9E5g2xNpnLWozxS5xV10Rw
+        Y2QNltsgzsp7JkqTl3dYZonFwSAtn6nwUqon6WKRLXrF8MhJTlel60ylg7pNzvPJiRP9bIhLPuQfaraJ
+        r6ozd86/ann3LN/wuxvE2Th38t8SecbnbpHk1W2Sljd47SJy2xi9cQK7pr5BjARa7WFDfAZa7WFDfAZa
+        7WFDfAZagUBgiSj6Aa9vy4/F3nuvAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>470, 16</value>
   </metadata>
 </root>

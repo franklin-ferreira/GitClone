@@ -39,21 +39,24 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroLink3 = new MetroFramework.Controls.MetroLink();
+            this.btnSelecionarLocalDonwload = new MetroFramework.Controls.MetroLink();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.mtProgress = new MetroFramework.Controls.MetroTile();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
-            this.btnIniciar = new MetroFramework.Controls.MetroLink();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.btnIniciarDonwloadRepos = new MetroFramework.Controls.MetroLink();
+            this.btnSelecionarArquivo = new MetroFramework.Controls.MetroLink();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.painelNotificacao = new MetroFramework.Controls.MetroPanel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
+            this.btnUpdate = new MetroFramework.Controls.MetroLink();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.lblGitStatus = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -133,12 +136,12 @@
             this.metroPanel2.Controls.Add(this.pictureBox2);
             this.metroPanel2.Controls.Add(this.pictureBox1);
             this.metroPanel2.Controls.Add(this.metroTile7);
-            this.metroPanel2.Controls.Add(this.metroLink3);
+            this.metroPanel2.Controls.Add(this.btnSelecionarLocalDonwload);
             this.metroPanel2.Controls.Add(this.metroTile6);
             this.metroPanel2.Controls.Add(this.metroTile4);
             this.metroPanel2.Controls.Add(this.metroPanel3);
-            this.metroPanel2.Controls.Add(this.btnIniciar);
-            this.metroPanel2.Controls.Add(this.metroLink1);
+            this.metroPanel2.Controls.Add(this.btnIniciarDonwloadRepos);
+            this.metroPanel2.Controls.Add(this.btnSelecionarArquivo);
             this.metroPanel2.Controls.Add(this.metroTile2);
             this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
@@ -197,21 +200,20 @@
             this.metroTile7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.metroTile7.UseSelectable = true;
             // 
-            // metroLink3
+            // btnSelecionarLocalDonwload
             // 
-            this.metroLink3.Image = ((System.Drawing.Image)(resources.GetObject("metroLink3.Image")));
-            this.metroLink3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroLink3.ImageSize = 24;
-            this.metroLink3.Location = new System.Drawing.Point(8, 191);
-            this.metroLink3.Name = "metroLink3";
-            this.metroLink3.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink3.NoFocusImage")));
-            this.metroLink3.Size = new System.Drawing.Size(202, 28);
-            this.metroLink3.TabIndex = 11;
-            this.metroLink3.Text = "Selecionar local de download";
-            this.metroLink3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.metroLink3, "Local onde ficará os repositórios baixados.");
-            this.metroLink3.UseSelectable = true;
-            this.metroLink3.Click += new System.EventHandler(this.metroLink3_Click);
+            this.btnSelecionarLocalDonwload.Image = ((System.Drawing.Image)(resources.GetObject("btnSelecionarLocalDonwload.Image")));
+            this.btnSelecionarLocalDonwload.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelecionarLocalDonwload.ImageSize = 24;
+            this.btnSelecionarLocalDonwload.Location = new System.Drawing.Point(8, 191);
+            this.btnSelecionarLocalDonwload.Name = "btnSelecionarLocalDonwload";
+            this.btnSelecionarLocalDonwload.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnSelecionarLocalDonwload.NoFocusImage")));
+            this.btnSelecionarLocalDonwload.Size = new System.Drawing.Size(246, 28);
+            this.btnSelecionarLocalDonwload.TabIndex = 11;
+            this.btnSelecionarLocalDonwload.Text = "Selecionar local de download";
+            this.toolTip1.SetToolTip(this.btnSelecionarLocalDonwload, "Local onde ficará os repositórios baixados.");
+            this.btnSelecionarLocalDonwload.UseSelectable = true;
+            this.btnSelecionarLocalDonwload.Click += new System.EventHandler(this.metroLink3_Click);
             // 
             // metroTile6
             // 
@@ -304,39 +306,37 @@
             this.metroProgressSpinner1.UseSelectable = true;
             this.metroProgressSpinner1.UseStyleColors = true;
             // 
-            // btnIniciar
+            // btnIniciarDonwloadRepos
             // 
-            this.btnIniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciar.Image")));
-            this.btnIniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIniciar.ImageSize = 24;
-            this.btnIniciar.Location = new System.Drawing.Point(8, 272);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnIniciar.NoFocusImage")));
-            this.btnIniciar.Size = new System.Drawing.Size(146, 26);
-            this.btnIniciar.TabIndex = 6;
-            this.btnIniciar.Text = "Iniciar donwload";
-            this.btnIniciar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.btnIniciar, "Iniciar donwload.");
-            this.btnIniciar.UseSelectable = true;
-            this.btnIniciar.Click += new System.EventHandler(this.metroLink2_Click);
+            this.btnIniciarDonwloadRepos.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciarDonwloadRepos.Image")));
+            this.btnIniciarDonwloadRepos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIniciarDonwloadRepos.ImageSize = 24;
+            this.btnIniciarDonwloadRepos.Location = new System.Drawing.Point(8, 272);
+            this.btnIniciarDonwloadRepos.Name = "btnIniciarDonwloadRepos";
+            this.btnIniciarDonwloadRepos.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnIniciarDonwloadRepos.NoFocusImage")));
+            this.btnIniciarDonwloadRepos.Size = new System.Drawing.Size(246, 26);
+            this.btnIniciarDonwloadRepos.TabIndex = 6;
+            this.btnIniciarDonwloadRepos.Text = "      Iniciar donwload dos repositórios";
+            this.toolTip1.SetToolTip(this.btnIniciarDonwloadRepos, "Iniciar donwload.");
+            this.btnIniciarDonwloadRepos.UseSelectable = true;
+            this.btnIniciarDonwloadRepos.Click += new System.EventHandler(this.metroLink2_Click);
             // 
-            // metroLink1
+            // btnSelecionarArquivo
             // 
-            this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
-            this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroLink1.ImageSize = 24;
-            this.metroLink1.Location = new System.Drawing.Point(8, 110);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink1.NoFocusImage")));
-            this.metroLink1.Size = new System.Drawing.Size(146, 28);
-            this.metroLink1.TabIndex = 4;
-            this.metroLink1.Text = "Selecionar arquivo";
-            this.metroLink1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.metroLink1, "Selecione o arquivo txt contendo os links de repositórios para realizar o downloa" +
+            this.btnSelecionarArquivo.Image = ((System.Drawing.Image)(resources.GetObject("btnSelecionarArquivo.Image")));
+            this.btnSelecionarArquivo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelecionarArquivo.ImageSize = 24;
+            this.btnSelecionarArquivo.Location = new System.Drawing.Point(8, 110);
+            this.btnSelecionarArquivo.Name = "btnSelecionarArquivo";
+            this.btnSelecionarArquivo.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnSelecionarArquivo.NoFocusImage")));
+            this.btnSelecionarArquivo.Size = new System.Drawing.Size(246, 28);
+            this.btnSelecionarArquivo.TabIndex = 4;
+            this.btnSelecionarArquivo.Text = "Selecionar arquivo";
+            this.toolTip1.SetToolTip(this.btnSelecionarArquivo, "Selecione o arquivo txt contendo os links de repositórios para realizar o downloa" +
         "d.\r\n Cada link deve estar em uma única linha deste arquivo.\r\n         ** O arqui" +
         "vo deve conter apenas link **\r\n");
-            this.metroLink1.UseSelectable = true;
-            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            this.btnSelecionarArquivo.UseSelectable = true;
+            this.btnSelecionarArquivo.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // metroTile2
             // 
@@ -395,11 +395,39 @@
         "e recurso do computador.");
             this.metroToggle1.UseSelectable = true;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.ImageSize = 18;
+            this.btnUpdate.Location = new System.Drawing.Point(314, 416);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.NoFocusImage")));
+            this.btnUpdate.Size = new System.Drawing.Size(141, 15);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Baixar atualização Git";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.btnUpdate, "Iniciar donwload.");
+            this.btnUpdate.UseSelectable = true;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblGitStatus
+            // 
+            this.lblGitStatus.AutoSize = true;
+            this.lblGitStatus.Location = new System.Drawing.Point(3, 418);
+            this.lblGitStatus.Name = "lblGitStatus";
+            this.lblGitStatus.Size = new System.Drawing.Size(35, 13);
+            this.lblGitStatus.TabIndex = 18;
+            this.lblGitStatus.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 434);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.lblGitStatus);
             this.Controls.Add(this.metroToggle1);
             this.Controls.Add(this.painelNotificacao);
             this.Controls.Add(this.metroPanel2);
@@ -428,8 +456,8 @@
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroTile mtTotal;
         private MetroFramework.Controls.MetroTile metroTile1;
-        private MetroFramework.Controls.MetroLink btnIniciar;
-        private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroLink btnIniciarDonwloadRepos;
+        private MetroFramework.Controls.MetroLink btnSelecionarArquivo;
         private MetroFramework.Controls.MetroTile metroTile2;
         private MetroFramework.Controls.MetroPanel painelNotificacao;
         private System.Windows.Forms.ListBox listBox1;
@@ -438,7 +466,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
         private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroLink metroLink3;
+        private MetroFramework.Controls.MetroLink btnSelecionarLocalDonwload;
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile4;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -448,6 +476,9 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolTip toolTip1;
         private MetroFramework.Controls.MetroToggle metroToggle1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label lblGitStatus;
+        private MetroFramework.Controls.MetroLink btnUpdate;
     }
 }
 

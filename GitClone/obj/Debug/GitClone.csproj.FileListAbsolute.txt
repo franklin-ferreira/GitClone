@@ -39,6 +39,6 @@ C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\MetroFramework.dl
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\SDK.Extensions.pdb
-C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\SDK.Extensions.dll.config
 C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\obj\Debug\GitClone.csproj.CopyComplete
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\ucControls.pdb
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\ucControls.dll.config
