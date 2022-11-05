@@ -4,26 +4,22 @@ Clonar repositórios do git
 
 > Tela inicial
 
-![image](https://user-images.githubusercontent.com/38293885/200142132-6275f333-9b52-4c40-96cd-d147bf8ccfb3.png)
+![image](https://user-images.githubusercontent.com/38293885/200143426-f21dd2cf-1ddf-4bcd-b065-9ed56f4fe723.png)
 
 > Links encontrados no arquivo txt
 
-![image](https://user-images.githubusercontent.com/38293885/200142141-a8b0d0d1-41d1-436b-9c84-f4f98733331f.png)
+![image](https://user-images.githubusercontent.com/38293885/200143428-ca9b8389-f3c3-421f-8a6f-68f322d5cf93.png)
 
 > Local selecionado
 
-![image](https://user-images.githubusercontent.com/38293885/200142144-e5fc065c-8de4-4f1b-837e-1e342ff14f82.png)
+![image](https://user-images.githubusercontent.com/38293885/200143435-ea445d09-ec4b-4940-8378-6f8241703207.png)
 
 > Baixando
 
-![image](https://user-images.githubusercontent.com/38293885/200142148-469a6bb6-8981-4aa0-8147-acad5aebc00b.png)
+![image](https://user-images.githubusercontent.com/38293885/200143438-11e7345f-1396-46a6-a816-f513b9fb3e6d.png)
 
 > Pasta é aberta após terminar.
 
-![image](https://user-images.githubusercontent.com/38293885/200142157-9bf5ce73-62c6-41f1-a165-8ee8bd63a590.png)
+![image](https://user-images.githubusercontent.com/38293885/200143443-9a105171-a9bc-42f9-9b58-5e31be55384f.png)
 
-![image](https://user-images.githubusercontent.com/38293885/200142152-798167ee-799c-4ef2-9b0e-6e090b139467.png)
-
-> Use essa opção caso queira acelerar em muito o processo, recomendado apenas em caso de muitos repositórios.
-
-![image](https://user-images.githubusercontent.com/38293885/200142219-0049dddd-aa12-4d7e-b525-8411c7430fd8.png)
+![image](https://user-images.githubusercontent.com/38293885/200143448-ec9ec590-0941-41d1-919c-9d4054d8b263.png)
