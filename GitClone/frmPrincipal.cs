@@ -54,7 +54,7 @@ namespace GitClone
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 localDownload = folderBrowserDialog1.SelectedPath;
-                ucNotificacao.AddNotificacao($"Local donwload: {localDownload}");
+                ucNotificacao.AddNotificacao($"Local download: {localDownload}");
             }
             validAllProgress();
 
@@ -113,21 +113,21 @@ namespace GitClone
             {
                 try
                 {
-                    btnIniciarDonwloadRepos.Enabled = false;
+                    btnSelecionarLocaldownload.Enabled = false;
                     btnSelecionarArquivo.Enabled = false;
-                    btnSelecionarLocalDonwload.Enabled = false;
+                    btnSelecionarLocaldownload.Enabled = false;
 
-                    await DonwloadGetForWindows();
+                    await downloadGetForWindows();
 
-                    btnIniciarDonwloadRepos.Enabled = true;
+                    btnSelecionarLocaldownload.Enabled = true;
                     btnSelecionarArquivo.Enabled = true;
-                    btnSelecionarLocalDonwload.Enabled = true;
+                    btnSelecionarLocaldownload.Enabled = true;
                 }
                 catch (Exception)
                 {
-                    btnIniciarDonwloadRepos.Enabled = true;
+                    btnSelecionarLocaldownload.Enabled = true;
                     btnSelecionarArquivo.Enabled = true;
-                    btnSelecionarLocalDonwload.Enabled = true;
+                    btnSelecionarLocaldownload.Enabled = true;
                 }
 
                 return false;
@@ -147,7 +147,7 @@ namespace GitClone
             {
                 isUpdateDisponivel = true;
                 btnUpdate.Visible = true;
-                toolTip1.SetToolTip(btnUpdate, $"Iniciar donwload Git-{version}");
+                toolTip1.SetToolTip(btnUpdate, $"Iniciar download Git-{version}");
 
             }
             if (ucNotificacao == null)
@@ -163,7 +163,7 @@ namespace GitClone
             }
         }
 
-        public async Task DonwloadGetForWindows()
+        public async Task downloadGetForWindows()
         {
             try
             {
@@ -171,11 +171,11 @@ namespace GitClone
                 GetLinkAndVersion(out link, out version);
                 if (!string.IsNullOrEmpty(link))
                 {
-                    await DonwloadGiForWindowsLastVersion(link, version);
+                    await downloadGiForWindowsLastVersion(link, version);
                 }
                 else
                 {
-                    if (MessageBox.Show($"Deseja executar o donwload manualmente ?", $"Erro Baixar Git for Windows") == DialogResult.Yes)
+                    if (MessageBox.Show($"Deseja executar o download manualmente ?", $"Erro Baixar Git for Windows") == DialogResult.Yes)
                         await Extension.RunCommandInWindowsPropmptAsync($"start https://gitforwindows.org/");
                 }
 
@@ -211,7 +211,7 @@ namespace GitClone
             }
         }
 
-        private static async Task DonwloadGiForWindowsLastVersion(string link, string version)
+        private static async Task downloadGiForWindowsLastVersion(string link, string version)
         {
             using (var client = new HttpClient())
             using (var result = await client.GetAsync(link))
@@ -219,7 +219,7 @@ namespace GitClone
                 var fileByte = result.IsSuccessStatusCode ? await result.Content.ReadAsByteArrayAsync() : null;
 
                 if (fileByte == null)
-                    throw new Exception("Deseja executar o donwload manualmente ?");
+                    throw new Exception("Deseja executar o download manualmente ?");
 
                 if (fileByte != null && fileByte.Any())
                 {
@@ -232,7 +232,7 @@ namespace GitClone
                     }
                     else
                     {
-                        if (MessageBox.Show($"Deseja executar o donwload manualmente ?", $"Erro Baixar Git-{version}") == DialogResult.Yes)
+                        if (MessageBox.Show($"Deseja executar o download manualmente ?", $"Erro Baixar Git-{version}") == DialogResult.Yes)
                         {
                             await Extension.RunCommandInWindowsPropmptAsync($"start {link}");
                         }
@@ -254,7 +254,7 @@ namespace GitClone
                 var taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
 
                 if (!startProcess)
-                    btnIniciarDonwloadRepos.Text = "Cancelar donwload";
+                    btnSelecionarLocaldownload.Text = "Cancelar download";
 
                 metroProgressSpinner1.Spinning = true;
                 try
@@ -267,44 +267,64 @@ namespace GitClone
 
                         Invoke(new MethodInvoker(() =>
                         {
-                            ucNotificacao.AddNotificacao("Iniciando donwload");
+                            ucNotificacao.AddNotificacao("Iniciando download");
                             metroPanel2.Enabled = false;
                             metroToggle1.Enabled = false;
-                            
+
                         }));
 
-                    if (metroToggle1.Checked)
+                        if (metroToggle1.Checked)
                         {
+                            bool isCompleted = false;
+                            Invoke(new MethodInvoker(() =>
+                            {
+                                metroToggle1.Checked = false;
+                            }));
                             Parallel.ForEach(repositories, async repos =>
                             {
                                 await Extension.RunCommandInWindowsPropmptAsync($"cd {localDownload} && git clone {repos}").ContinueWith(_ =>
                                 {
                                     var dir = Directory.GetDirectories(localDownload);
-                                    Invoke(new MethodInvoker(async () =>
+                                    Invoke(new MethodInvoker(() =>
                                     {
-                                        metroToggle1.Checked = false;
                                         listBox1.Items.Clear();
                                         listBox1.Items.AddRange(dir.Select(x => Path.GetFileName(x)).ToArray());
                                         listBox1.Refresh();
                                         mtTotal.Text = $"Baixando {listBox1.Items.Count.ToString()} ..";
                                         SetProgress();
-                                        if (listBox1.Items.Count == repositories.Count)
-                                        {
-                                            mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
-                                            await Extension.RunCommandInWindowsPropmptAsync($"start {localDownload}");
-                                            metroProgressSpinner1.Spinning = false;
-                                            btnIniciarDonwloadRepos.Text = "Iniciar donwload";
-                                            startProcess = false;
-                                            ucNotificacao.AddNotificacao("Repositórios baixados.");
-                                            metroPanel2.Enabled = true;
-                                            metroToggle1.Enabled = true;
-                                        }
                                     }));
                                 });
+                                
                             });
+                            Invoke(new MethodInvoker(async () =>
+                            {
+                                if (listBox1.Items.Count == repositories.Count)
+                                {
+                                    mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
+                                    if (!isCompleted)
+                                    {
+                                        await Extension.RunCommandInWindowsPropmptAsync($"start {localDownload}");
+                                        ucNotificacao.AddNotificacao("Repositórios baixados.");
+                                    }
+                                    isCompleted = true;
+
+                                    metroProgressSpinner1.Spinning = false;
+                                    btnSelecionarLocaldownload.Text = "Iniciar download";
+                                    startProcess = false;
+
+                                    metroPanel2.Enabled = true;
+                                    metroToggle1.Enabled = true;
+
+                                }
+                            }));
                         }
                         else
                         {
+                            bool isCompleted = false;
+                            Invoke(new MethodInvoker(() =>
+                            {
+                                metroToggle1.Checked = false;
+                            }));
                             foreach (var item in repositories)
                             {
                                 await Extension.RunCommandInWindowsPropmptAsync($"cd {localDownload} && git clone {item}")
@@ -317,18 +337,25 @@ namespace GitClone
                                         listBox1.Items.AddRange(dir.Select(x => Path.GetFileName(x)).ToArray());
                                         listBox1.Refresh();
                                         mtTotal.Text = $"Baixando {listBox1.Items.Count.ToString()} ..";
-                                        metroToggle1.Checked = false;
+
                                         SetProgress();
                                         if (listBox1.Items.Count == repositories.Count)
                                         {
                                             mtTotal.Text = $"Total {listBox1.Items.Count.ToString()} ..";
-                                            await Extension.RunCommandInWindowsPropmptAsync($"start {localDownload}");
+                                            if (!isCompleted)
+                                            {
+                                                await Extension.RunCommandInWindowsPropmptAsync($"start {localDownload}");
+                                                ucNotificacao.AddNotificacao("Repositórios baixados.");
+                                            }
+                                            isCompleted = true;
                                             metroProgressSpinner1.Spinning = false;
-                                            btnIniciarDonwloadRepos.Text = "Iniciar donwload";
+                                            btnSelecionarLocaldownload.Text = "Iniciar download";
                                             startProcess = false;
-                                            ucNotificacao.AddNotificacao("Repositórios baixados.");
+
                                             metroPanel2.Enabled = true;
                                             metroToggle1.Enabled = true;
+
+
                                         }
                                     }));
                                 });
@@ -348,7 +375,7 @@ namespace GitClone
                         MessageBox.Show($"{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
-                    btnIniciarDonwloadRepos.Text = "Iniciar donwload";
+                    btnSelecionarLocaldownload.Text = "Iniciar download";
                     startProcess = false;
                     metroPanel2.Enabled = true;
                     metroToggle1.Enabled = true;
@@ -362,7 +389,7 @@ namespace GitClone
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
-            await DonwloadGetForWindows();
+            await downloadGetForWindows();
         }
     }
 }

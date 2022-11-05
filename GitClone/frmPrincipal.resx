@@ -161,7 +161,10 @@
         gbabf+dYPQwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnSelecionarLocalDonwload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>365, 16</value>
+  </metadata>
+  <data name="btnSelecionarLocaldownload.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAfFJREFUaEPt
         mD1KA1EURp8oKIimUATFKP7EZKJLsBDsLKxdgxuwtnANVooRC4maFEEUggTEBJORbMDGPkQSGwvB6xu4
@@ -175,7 +178,7 @@
         nGexWCwWC6PUDyorJom/xNvQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnSelecionarLocalDonwload.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSelecionarLocaldownload.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAA8ZJREFUaEPt
         lktIVFEYxwci2rSrXTQ7H9U6skTIjc0EPsfRpoc5944i1agtTNRFRJQR9LAGWhVpjZpZYlgZtpCinFIJ
@@ -197,9 +200,6 @@
         cTvGMI8elwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>365, 16</value>
-  </metadata>
   <data name="mtProgress.TileImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAA8VJREFUaEPt
@@ -222,7 +222,7 @@
         E5+h07cIAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnIniciarDonwloadRepos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnIniciarDownloadRepos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABEJJREFUaEPV
         mttvFFUcx1d9MUZFH3wyvsGDEYIGr1wSiEY6M5VLAGOIGo0S/wQSEpI+GOMbAXdmtlzKRUXDkwG8dGdm
@@ -246,7 +246,7 @@
         kbgHHLzuBO6gQ9IAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnIniciarDonwloadRepos.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnIniciarDownloadRepos.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAABTVJREFUaEPt
         1+tPm1UcB/BnikqB0XEtlELLBsii89X+AP8BE3VZjC76xhdqfGNilji6civ32zYuW7msMBgxLvGFiTG+
@@ -333,6 +333,9 @@
   </metadata>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>207, 17</value>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>365, 16</value>
   </metadata>
   <data name="btnUpdate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
