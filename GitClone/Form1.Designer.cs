@@ -432,6 +432,7 @@
             this.Controls.Add(this.painelNotificacao);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.metroPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(561, 434);
             this.MinimumSize = new System.Drawing.Size(561, 434);
