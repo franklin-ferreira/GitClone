@@ -42,3 +42,5 @@ C:\Users\Franklin\source\repos\Frk.SDK\GitClone\obj\Debug\GitClone.csproj.CoreCo
 C:\Users\Franklin\source\repos\Frk.SDK\GitClone\obj\Debug\GitClone.csproj.CopyComplete
 C:\Users\Franklin\source\repos\Frk.SDK\GitClone\obj\Debug\GitClone.exe
 C:\Users\Franklin\source\repos\Frk.SDK\GitClone\obj\Debug\GitClone.pdb
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\ucControls.pdb
+C:\Users\Franklin\Desktop\Projetos\GitClone\GitClone\bin\Debug\ucControls.dll.config

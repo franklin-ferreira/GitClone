@@ -57,6 +57,7 @@
             this.btnUpdate = new MetroFramework.Controls.MetroLink();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.lblGitStatus = new System.Windows.Forms.Label();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -400,7 +401,7 @@
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.ImageSize = 18;
-            this.btnUpdate.Location = new System.Drawing.Point(314, 416);
+            this.btnUpdate.Location = new System.Drawing.Point(279, 416);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.NoFocusImage")));
             this.btnUpdate.Size = new System.Drawing.Size(141, 15);
@@ -421,11 +422,27 @@
             this.lblGitStatus.TabIndex = 18;
             this.lblGitStatus.Text = "label1";
             // 
+            // metroLink1
+            // 
+            this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
+            this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroLink1.ImageSize = 15;
+            this.metroLink1.Location = new System.Drawing.Point(431, 414);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink1.NoFocusImage")));
+            this.metroLink1.Size = new System.Drawing.Size(24, 17);
+            this.metroLink1.TabIndex = 19;
+            this.metroLink1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.metroLink1, "Verificar se tem atualização para Git.");
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 434);
+            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblGitStatus);
             this.Controls.Add(this.metroToggle1);
@@ -480,6 +497,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label lblGitStatus;
         private MetroFramework.Controls.MetroLink btnUpdate;
+        private MetroFramework.Controls.MetroLink metroLink1;
     }
 }
 

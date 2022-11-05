@@ -140,8 +140,8 @@ namespace GitClone
         {
             var val = Extension.VerifyRegisterKey("GitForWindows");
             lblGitStatus.Text = $"GIT:. CurrentVersion: {val.CurrentVersion}";
-            string link, version;
-            GetLinkAndVersion(out link, out version);
+            string link, version, wasPublished;
+            GetLinkAndVersion(out link, out version, out wasPublished);
             bool isUpdateDisponivel = false;
             if (val.CurrentVersion != version)
             {
@@ -167,8 +167,8 @@ namespace GitClone
         {
             try
             {
-                string link, version;
-                GetLinkAndVersion(out link, out version);
+                string link, version, wasPublished;
+                GetLinkAndVersion(out link, out version, out wasPublished);
                 if (!string.IsNullOrEmpty(link))
                 {
                     await downloadGiForWindowsLastVersion(link, version);
@@ -189,18 +189,22 @@ namespace GitClone
             }
         }
 
-        private static void GetLinkAndVersion(out string link, out string version)
+        private static void GetLinkAndVersion(out string link, out string version, out string wasPublished)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://gitforwindows.org/");
             var response = request.GetResponseAsync().Result;
             string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            var contentSplit = content.Split();
+            var contentSplit = content.StringForArrayChar();
             link = contentSplit.Where(x => x.Contains("href=\"https://github.com/git-for-windows/git/releases/tag/"))
                                                 .FirstOrDefault()
-                                                .ToString();
+                                                .ToString().Replace("<div class=\"version\"><a href=\"","");
             version = string.Empty;
+            wasPublished = string.Empty;
             if (!string.IsNullOrEmpty(link))
             {
+                var title = link.Substring(link.IndexOf("title=")).Replace("title=\"", "");
+                wasPublished = title.Remove(title.IndexOf("\">"));
+                
 
                 int operationSystem = Environment.Is64BitOperatingSystem ? 64 : 32;
                 link = link.Trim().Replace("tag", "download").Replace("href=\"", "");
@@ -390,6 +394,27 @@ namespace GitClone
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
             await downloadGetForWindows();
+        }
+
+        private void metroLink1_Click_1(object sender, EventArgs e)
+        {
+            var val = Extension.VerifyRegisterKey("GitForWindows");
+            lblGitStatus.Text = $"GIT:. CurrentVersion: {val.CurrentVersion}";
+            string link, version, wasPublished;
+            GetLinkAndVersion(out link, out version, out wasPublished);
+            if (val.CurrentVersion != version)
+            {
+                btnUpdate.Visible = true;
+                toolTip1.SetToolTip(btnUpdate, $"Iniciar download Git-{version}");
+                ucNotificacao.AddNotificacao($"Nova versão do Git-{version} está disponível");
+                btnUpdate.Enabled = true;
+            }
+            else
+            {
+                ucNotificacao.timerInterval = 60000;
+                ucNotificacao.AddNotificacao($"Você já está com a ultima versão do Git Bash\n{wasPublished}");
+                btnUpdate.Enabled = false;
+            }
         }
     }
 }
