@@ -210,8 +210,7 @@ namespace GitClone
                 link = link.Trim().Replace("tag", "download").Replace("href=\"", "");
                 version = link.Remove(0, link.IndexOf("download/"));
                 version = version.Remove(version.IndexOf("windows") - 1).Replace("download/v", "");
-                link = $"{link.Remove(link.Length - 1)}/Git-{version}-{operationSystem}-bit.exe";
-
+                link = $"{link.Remove(link.IndexOf(" ")).Replace("\"","")}/Git-{version}-{operationSystem}-bit.exe";
             }
         }
 

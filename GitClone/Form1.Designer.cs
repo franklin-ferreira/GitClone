@@ -55,9 +55,9 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.btnUpdate = new MetroFramework.Controls.MetroLink();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.lblGitStatus = new System.Windows.Forms.Label();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -395,6 +395,7 @@
             this.toolTip1.SetToolTip(this.metroToggle1, "Use se voce tiver muitos repositórios para baixar,\r\nEssa opção usa bastante recur" +
         "so do computador.");
             this.metroToggle1.UseSelectable = true;
+            this.metroToggle1.Visible = false;
             // 
             // btnUpdate
             // 
@@ -413,15 +414,6 @@
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // lblGitStatus
-            // 
-            this.lblGitStatus.AutoSize = true;
-            this.lblGitStatus.Location = new System.Drawing.Point(3, 418);
-            this.lblGitStatus.Name = "lblGitStatus";
-            this.lblGitStatus.Size = new System.Drawing.Size(35, 13);
-            this.lblGitStatus.TabIndex = 18;
-            this.lblGitStatus.Text = "label1";
-            // 
             // metroLink1
             // 
             this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
@@ -436,6 +428,15 @@
             this.toolTip1.SetToolTip(this.metroLink1, "Verificar se tem atualização para Git.");
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click_1);
+            // 
+            // lblGitStatus
+            // 
+            this.lblGitStatus.AutoSize = true;
+            this.lblGitStatus.Location = new System.Drawing.Point(3, 418);
+            this.lblGitStatus.Name = "lblGitStatus";
+            this.lblGitStatus.Size = new System.Drawing.Size(35, 13);
+            this.lblGitStatus.TabIndex = 18;
+            this.lblGitStatus.Text = "label1";
             // 
             // Form1
             // 
