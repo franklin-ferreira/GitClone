@@ -420,10 +420,10 @@
             this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
             this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroLink1.ImageSize = 15;
-            this.metroLink1.Location = new System.Drawing.Point(517, 414);
+            this.metroLink1.Location = new System.Drawing.Point(523, 416);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink1.NoFocusImage")));
-            this.metroLink1.Size = new System.Drawing.Size(24, 17);
+            this.metroLink1.Size = new System.Drawing.Size(18, 15);
             this.metroLink1.TabIndex = 19;
             this.metroLink1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip1.SetToolTip(this.metroLink1, "Verificar se tem atualização para Git.");
