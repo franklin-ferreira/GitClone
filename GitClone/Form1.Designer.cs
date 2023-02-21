@@ -58,6 +58,7 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.lblGitStatus = new System.Windows.Forms.Label();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -387,7 +388,7 @@
             // metroToggle1
             // 
             this.metroToggle1.AutoSize = true;
-            this.metroToggle1.Location = new System.Drawing.Point(461, 414);
+            this.metroToggle1.Location = new System.Drawing.Point(117, 414);
             this.metroToggle1.Name = "metroToggle1";
             this.metroToggle1.Size = new System.Drawing.Size(80, 17);
             this.metroToggle1.TabIndex = 17;
@@ -438,11 +439,19 @@
             this.lblGitStatus.TabIndex = 18;
             this.lblGitStatus.Text = "label1";
             // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(454, 418);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(84, 13);
+            this.metroProgressBar1.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 434);
+            this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblGitStatus);
@@ -499,6 +508,7 @@
         private System.Windows.Forms.Label lblGitStatus;
         private MetroFramework.Controls.MetroLink btnUpdate;
         private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
     }
 }
 
