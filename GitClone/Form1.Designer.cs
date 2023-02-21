@@ -403,7 +403,7 @@
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.ImageSize = 18;
-            this.btnUpdate.Location = new System.Drawing.Point(279, 416);
+            this.btnUpdate.Location = new System.Drawing.Point(230, 416);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.NoFocusImage")));
             this.btnUpdate.Size = new System.Drawing.Size(141, 15);
@@ -420,7 +420,7 @@
             this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
             this.metroLink1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroLink1.ImageSize = 15;
-            this.metroLink1.Location = new System.Drawing.Point(431, 414);
+            this.metroLink1.Location = new System.Drawing.Point(517, 414);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("metroLink1.NoFocusImage")));
             this.metroLink1.Size = new System.Drawing.Size(24, 17);
@@ -441,10 +441,13 @@
             // 
             // metroProgressBar1
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(454, 418);
+            this.metroProgressBar1.Location = new System.Drawing.Point(377, 418);
             this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(84, 13);
+            this.metroProgressBar1.Size = new System.Drawing.Size(134, 13);
+            this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroProgressBar1.TabIndex = 20;
+            this.metroProgressBar1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroProgressBar1.Visible = false;
             // 
             // Form1
             // 

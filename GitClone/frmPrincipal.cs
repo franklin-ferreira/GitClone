@@ -147,6 +147,7 @@ namespace GitClone
             {
                 isUpdateDisponivel = true;
                 btnUpdate.Visible = true;
+                metroProgressBar1.Visible = true;
                 toolTip1.SetToolTip(btnUpdate, $"Iniciar download Git-{version}");
 
             }
@@ -213,8 +214,68 @@ namespace GitClone
                 link = $"{link.Remove(link.IndexOf(" ")).Replace("\"","")}/Git-{version}-{operationSystem}-bit.exe";
             }
         }
+        public async Task downloadGiForWindowsLastVersion(string link, string version)
+        {
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetAsync(link, HttpCompletionOption.ResponseHeadersRead);
+                var contentLength = result.Content.Headers.ContentLength;
+                var buffer = new byte[8192];
+                var bytesRead = 0L;
+                using (var contentStream = await result.Content.ReadAsStreamAsync())
+                {
+                    var downloadsPath = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders", "{374DE290-123F-4565-9164-39C4925E467B}", string.Empty).ToString();
+                    var filePath = $@"{downloadsPath}\Git-{version}.exe";
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        var progress = new Progress<long>(totalBytes =>
+                        {
+                            Console.WriteLine($"Downloaded {totalBytes} bytes out of {contentLength} bytes.");
+                            Invoke(new MethodInvoker(() =>
+                            {
+                                metroProgressBar1.Visible = true;
+                                metroProgressBar1.Maximum = Convert.ToInt32(contentLength);
+                                metroProgressBar1.Value = Convert.ToInt32(totalBytes);
+                            }));
+                        });
+                        while (true)
+                        {
+                            var bytes = await contentStream.ReadAsync(buffer, 0, buffer.Length);
+                            if (bytes == 0)
+                            {
+                                break;
+                            }
+                            await fileStream.WriteAsync(buffer, 0, bytes);
+                            bytesRead += bytes;
+                            ((IProgress<long>)progress).Report(bytesRead);
+                        }
+                    }
+                    if (File.Exists(filePath))
+                    {
+                        await Extension.RunCommandInWindowsPropmptAsync($"start {filePath}");
+                    }
+                    else
+                    {
+                        if (MessageBox.Show($"Deseja executar o download manualmente ?", $"Erro Baixar Git-{version}") == DialogResult.Yes)
+                        {
+                            await Extension.RunCommandInWindowsPropmptAsync($"start {link}");
+                        }
+                    }
+                    metroProgressBar1.Visible = false;
+                    metroProgressBar1.Maximum = 0;
+                    metroProgressBar1.Value = 0;
+                }
+            }
 
-        private static async Task downloadGiForWindowsLastVersion(string link, string version)
+        }
+        /// <summary>
+        /// obsoleto
+        /// </summary>
+        /// <param name="link"></param>
+        /// <param name="version"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        private static async Task downloadGiForWindowsLastVersion(string link, string version, bool obsoleto = true)
         {
             using (var client = new HttpClient())
             using (var result = await client.GetAsync(link))
@@ -404,15 +465,18 @@ namespace GitClone
             if (val.CurrentVersion != version)
             {
                 btnUpdate.Visible = true;
+                metroProgressBar1.Visible = true;
                 toolTip1.SetToolTip(btnUpdate, $"Iniciar download Git-{version}");
                 ucNotificacao.AddNotificacao($"Nova versão do Git-{version} está disponível");
                 btnUpdate.Enabled = true;
+                metroProgressBar1.Enabled = true;
             }
             else
             {
                 ucNotificacao.timerInterval = 60000;
                 ucNotificacao.AddNotificacao($"Você já está com a ultima versão do Git Bash\n{wasPublished}");
                 btnUpdate.Enabled = false;
+                metroProgressBar1.Enabled = false;
             }
         }
     }
